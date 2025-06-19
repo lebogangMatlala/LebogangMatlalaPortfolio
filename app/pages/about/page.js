@@ -160,10 +160,10 @@ export default function About() {
                 <header className="mb-16 text-center md:text-left">
                     <h1 className="text-5xl font-extrabold text-primary mb-4">About Me</h1>
                     <p className="max-w-3xl mx-auto md:mx-0 text-lg leading-relaxed">
-                        I’m Lebogang Matlala, a passionate full-stack developer dedicated to crafting scalable and user-centric software solutions. Below you’ll find my educational background, work experience, achievements, and skills.
+                    {"I'm "} Lebogang Matlala, a passionate full-stack developer dedicated to crafting scalable and user-centric software solutions. Below you’ll find my educational background, work experience, achievements, and skills.
                     </p>
                     <p className="italic text-neutral-600 mt-4 max-w-3xl mx-auto md:mx-0">
-                        “Code with purpose, design with empathy, deliver with consistency.”
+                       
                     </p>
                 </header>
             </section>

@@ -31,10 +31,11 @@ export default function Home() {
             Welcome to My Portfolio
           </h1>
           <p className="text-lg max-w-xl">
-            I'm <span className="text-secondary font-semibold">Lebogang Matlala</span>, a full stack developer building impactful solutions with <strong>Java, Spring Boot, React</strong> and <strong>Azure</strong>. I’m passionate about clean code and user-first experiences.
+          {"I'm "} <span className="text-secondary font-semibold">Lebogang Matlala</span>, a full stack developer building impactful solutions with <strong>Java, Spring Boot, React</strong> and <strong>Azure</strong>. I’m passionate about clean code and user-first experiences.
           </p>
           <p className="italic text-sm text-neutral-600">
-            “Code with purpose, design with empathy, deliver with consistency.”
+         
+            
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
             <Link
