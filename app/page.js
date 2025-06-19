@@ -1,103 +1,137 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+const skills = [
+  { name: "Java & Spring Boot", level: 90 },
+  { name: "React & Ionic", level: 85 },
+  { name: "Azure & Cloud", level: 75 },
+  { name: "TypeScript & Node.js", level: 80 },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="bg-neutralLight text-neutralDark font-sans"
+    >
+      <main className="max-w-7xl mx-auto px-6 sm:px-20 py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+        {/* Text Section */}
+        <motion.div
+          initial={{ x: -40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="flex flex-col gap-6 text-center md:text-left"
+        >
+          <h1 className="text-5xl font-bold text-primary leading-tight">
+            Welcome to My Portfolio
+          </h1>
+          <p className="text-lg max-w-xl">
+            I'm <span className="text-secondary font-semibold">Lebogang Matlala</span>, a full stack developer building impactful solutions with <strong>Java, Spring Boot, React</strong> and <strong>Azure</strong>. I’m passionate about clean code and user-first experiences.
+          </p>
+          <p className="italic text-sm text-neutral-600">
+            “Code with purpose, design with empathy, deliver with consistency.”
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
+            <Link
+              href="/projects"
+              className="px-6 py-3 bg-primary text-white rounded hover:bg-secondary hover:scale-105 transition duration-300 text-center"
+            >
+              View Projects
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-3 border border-secondary text-secondary rounded hover:bg-accent hover:text-white transition duration-300 text-center"
+            >
+              Contact Me
+            </Link>
+          </div>
+        </motion.div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        {/* Image Section */}
+        <motion.div
+          initial={{ x: 40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="flex justify-center md:justify-end"
+        >
+          <motion.div whileHover={{ scale: 1.05 }} className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem]">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/lebogangmatlalaPor.gif"
+              alt="Lebogang Matlala"
+              fill
+              className="rounded-full object-cover shadow-xl border-4 border-accent"
+              unoptimized
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          </motion.div>
+        </motion.div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      {/* What I Do Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6 sm:px-20">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl font-extrabold text-primary mb-10 text-center tracking-wide"
+          >
+            What I Do
+          </motion.h2>
+
+          <motion.ul
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.3 } } }}
+            className="space-y-6 max-w-3xl mx-auto text-neutralDark text-lg leading-relaxed"
+          >
+            {[
+              "🚀 Build scalable Java & Spring Boot backend services",
+              "🎨 Develop modern React & Ionic frontend applications",
+              "☁️ Deploy and manage applications on Microsoft Azure",
+              "🤝 Collaborate with cross-functional teams to deliver quality software",
+            ].map((text, idx) => (
+              <motion.li
+                key={idx}
+                variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}
+              >
+                {text}
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          {/* Skills */}
+          <motion.div className="mt-16 max-w-3xl mx-auto">
+            <h3 className="text-primary font-bold text-2xl mb-8 text-center">Skill Proficiency</h3>
+            {skills.map(({ name, level }) => (
+              <div key={name} className="mb-8">
+                <div className="flex justify-between mb-1">
+                  <span className="font-semibold text-neutralDark">{name}</span>
+                  <span className="font-medium text-sm text-neutralDark">{level}%</span>
+                </div>
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${level}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                  className="h-6 bg-primary bg-opacity-10 rounded-full relative overflow-hidden"
+                >
+                  <div
+                    className="absolute left-0 top-0 h-6 bg-secondary rounded-full"
+                    style={{ width: `${level}%` }}
+                  />
+                </motion.div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </motion.div>
   );
 }
