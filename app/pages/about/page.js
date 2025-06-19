@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 const educationItems = [
     {
         date: "2013 - 2018",
@@ -203,11 +203,12 @@ export default function About() {
                             className="bg-white shadow-md rounded-md p-6 border-l-4 border-accent flex items-start gap-4 hover:bg-accent/10 transition"
                         >
                             {logoSrc && (
-                                <img
+                                <Image 
                                     src={logoSrc}
                                     alt={`${issuer} logo`}
                                     className="h-12 w-12 object-contain mt-1"
                                     loading="lazy"
+                                    width={400} height={300}
                                 />
                             )}
                             <div>

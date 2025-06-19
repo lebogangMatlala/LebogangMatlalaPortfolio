@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaDownload, FaEye } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Resume() {
   return (
@@ -21,10 +22,11 @@ export default function Resume() {
         transition={{ duration: 0.5 }}
         className="bg-white shadow-lg rounded-xl p-8 w-full max-w-xl text-center border-t-4 border-primary"
       >
-        <img
+        <Image 
           src="/resumeicon.png"
           alt="Resume icon"
           className="w-16 h-16 mx-auto mb-4"
+          width={400} height={300}
         />
 
         <p className="text-neutral-700 text-lg mb-6">
