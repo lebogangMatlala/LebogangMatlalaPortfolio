@@ -15,7 +15,7 @@ export default function Contact() {
       >
         <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-4">Contact Me</h1>
         <p className="text-lg">
-          Have a question, proposal, or just want to say hi? Fill out the form below 👇
+        {"Let"}&apos;{"s"} build something great together! Whether {"it"}&apos;{"s"} a job offer, collaboration, or just a quick hello,drop me a message below 👇
         </p>
       </motion.div>
 

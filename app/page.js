@@ -36,7 +36,7 @@ export default function Home() {
           </h1>
           <p className="text-lg max-w-xl dark:text-neutral-300">
           {"I"}&apos;{"m"}
-            <span className="text-secondary font-semibold">Lebogang Matlala</span>, a full stack
+            <span className="text-secondary font-semibold"> Lebogang Matlala</span>, a full stack
             developer building impactful solutions with <strong>Java, Spring Boot, React</strong> and{" "}
             <strong>Azure</strong>. I’m passionate about clean code and user-first experiences.
           </p>
