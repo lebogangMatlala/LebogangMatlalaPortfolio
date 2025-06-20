@@ -102,7 +102,6 @@ export default function Home() {
               "☁️ Deploy and maintain cloud-native apps on Azure with CI/CD and monitoring for reliability.",
               "🤝 Collaborate with UX/UI, product, and QA teams to deliver user-focused, high-quality software.",
               "🔧 Use TypeScript and Node.js to build robust, maintainable, modular codebases.",
-              "🔍 Perform code reviews and testing to ensure quality, performance, and security.",
               "📚 Stay current with new tech, frameworks, and best practices to drive innovation",
             ].map((text, idx) => (
               <motion.li
