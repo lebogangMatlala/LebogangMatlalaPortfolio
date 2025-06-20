@@ -7,74 +7,89 @@ const projects = [
   {
     title: "Ejoobi Platform",
     description:
-      "Responsible for backend development, testing, deploying features, and setting up the development environment.",
-    tech: ["Spring Boot MVC", "MongoDB", "Maven", "SendGrid", "Google Cloud Talent Solution"],
-    image: "/tech.jpg",
+      "Backend development, testing, deploying features, and setting up the development environment.",
+    tech: ["Java", "Spring Boot MVC", "MongoDB", "Maven", "SendGrid", "Google Cloud Talent Solution"],
+    image: "/screening-and-selection.png",
   },
   {
     title: "USSD Upgrade",
     description:
       "Upgraded the USSD system using ASP.NET and integrated with Google Cloud Talent Solution.",
-    tech: ["ASP.NET", "Restful API", "MySQL Server", "Google Cloud Talent Solution"],
-    image: "/tech.jpg",
+    tech: ["ASP.NET", "RESTful API", "MySQL", "Google Cloud Talent Solution"],
+    image: "/ussd.png",
   },
   {
     title: "Credit Card Fraud Detection",
     description:
       "Built backend services as part of a qualification project to detect credit card fraud.",
-    tech: ["Spring Boot MVC", "MongoDB", "Maven", "SendGrid"],
-    image: "/tech.jpg",
+    tech: ["Java", "Spring Boot MVC", "MongoDB", "Maven", "SendGrid"],
+    image: "/cred.png",
   },
   {
-    title: "Mobile App",
+    title: "Hotel Management Booking System",
     description:
-      "Worked on backend and feature development using Ionic framework and Firebase.",
+      "Comprehensive system for managing hotel bookings, room availability, and customer details using Angular and TypeScript with SQL database.",
+    tech: ["Angular", "TypeScript", "SQL"],
+    image: "/hotel.png",
+  },
+  {
+    title: "Smart Campus",
+    description:
+      "Intelligent campus solution built with Next.js, Node.js, and MongoDB to manage campus resources and student services.",
+    tech: ["Next.js", "React", "Node.js", "MongoDB"],
+    image: "/smart.png",
+  },
+  {
+    title: "Quiz Mobile App",
+    description:
+      "Responsive mobile quiz app using Ionic and Angular, integrating Firebase for real-time database, authentication, and cloud storage.",
     tech: ["TypeScript", "Ionic", "Angular", "Firebase"],
-    image: "/tech.jpg",
+    image: "/quiz.png",
   },
   {
     title: "Cloud Talent Search",
     description:
       "Implemented machine learning job search using Google Cloud Talent solution hosted on Azure.",
-    tech: ["ASP.NET", "Google Cloud Talent Solution", "Azure Web App"],
-    image: "/tech.jpg",
+    tech: ["ASP.NET", "Google Cloud Talent Solution", "Azure Web Apps"],
+    image: "/talent.png",
   },
   {
     title: "Financial Literacy App",
     description:
-      "Helped educate users on financial concepts using a multi-platform stack.",
-    tech: ["React Native", "Bootstrap", "HTML", "CSS", "Spring Boot", "Hibernate"],
-    image: "/tech.jpg",
+      "Multi-platform app educating users on financial concepts using React Native frontend and Java backend.",
+    tech: ["React Native", "Bootstrap", "Spring Boot", "Hibernate", "JavaScript", "HTML", "CSS"],
+    image: "/finn.png",
   },
   {
     title: "SAATPLAY Website",
     description:
       "Built a WordPress site with SEO, social media integration, and mobile responsiveness.",
     tech: ["WordPress", "SEO", "Responsive Design"],
-    image: "/tech.jpg",
+    image: "/saat.png",
   },
   {
     title: "Citizen Reporting App",
     description:
-      "Developed a smart city app for reporting infrastructure issues to local authorities.",
+      "Smart city app for reporting infrastructure issues to local authorities.",
     tech: ["Next.js", "Spring Boot", "MongoDB"],
-    image: "/tech.jpg",
+    image: "/citi.png",
   },
   {
     title: "Ticket Tracking System",
     description:
-      "Created a support system for technicians to manage and resolve issue tickets.",
-    tech: ["Java", "Spring Boot", "React.js"],
-    image: "/tech.jpg",
+      "Support system for technicians to manage and resolve issue tickets.",
+    tech: ["Java", "Spring Boot", "React"],
+    image: "/ticket.png",
   },
   {
     title: "Smart Rental Management",
     description:
-      "Mobile app that streamlines application for rental units under government property.",
+      "Mobile app streamlining applications for rental units under government property.",
     tech: ["React Native", "Node.js", "SQL", "Next.js"],
-    image: "/tech.jpg",
+    image: "/rental.png",
   },
 ];
+
 
 export default function Projects() {
   return (
@@ -103,7 +118,9 @@ export default function Projects() {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain w-full h-full transition-transform duration-300 hover:scale-105 rounded-t-lg"
+                unoptimized
               />
             </div>
             <div className="p-6">

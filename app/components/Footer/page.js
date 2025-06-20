@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function Footer() {
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "../../pages/about" },
-    { name: "Projects", href: "../../pages/projects" },
-    { name: "Contact", href: "../../pages/contact" },
+    { name: "About", href: "../../about" },
+    { name: "Projects", href: "../../projects" },
+    { name: "Contact", href: "../../contact" },
   ];
 
   return (

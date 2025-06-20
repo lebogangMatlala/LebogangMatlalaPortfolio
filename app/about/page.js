@@ -129,22 +129,30 @@ const achievements = [
 
 const softSkills = [
     "Disciplined and Responsible",
-    "Strong Communication Skills",
+    "Excellent Communication Skills",
     "Effective Time Management",
-    "Collaborative Team Member",
-    "Adaptive and Flexible",
-    "Prioritization of Tasks",
-];
-
-const technicalSkills = [
-    "Java, SpringBoot MVC, Typescript",
-    "Google Cloud Platform, Microsoft Azure, and DevOps",
+    "Collaborative Team Player",
+    "Adaptable and Flexible",
+    "Strong Task Prioritization",
+  ];
+  
+  const technicalSkills = [
+    "Java, Spring Boot MVC, TypeScript",
+    "Google Cloud Platform, Microsoft Azure, DevOps,Docker",
     "React, Ionic Framework, JavaScript",
     "AngularJS, Node.js, JSP",
-    "HTML5 & CSS, Bootstrap, Web services, WordPress",
-];
-
-const databases = ["SQL", "MongoDB", "Firebase", "MySQL"];
+    "HTML5, CSS3, Bootstrap, Web Services, WordPress",
+  ];
+  
+  const databases = [
+    "SQL",
+    "MongoDB",
+    "Firebase",
+    "MySQL",
+    "PostgreSQL",
+    "Microsoft SQL Server",
+  ];
+  
 
 export default function About() {
     const [activeSkillTab, setActiveSkillTab] = useState("soft");
@@ -160,8 +168,7 @@ export default function About() {
             <header className="mb-16 text-center md:text-left">
               <h1 className="text-5xl font-extrabold text-primary mb-4">About Me</h1>
               <p className="max-w-3xl mx-auto md:mx-0 text-lg leading-relaxed">
-                {"I'm "} Lebogang Matlala, a passionate full-stack developer dedicated to
-                crafting scalable and user-centric software solutions. Below you’ll find
+                {"I'm "} Lebogang Matlala, a passionate full stack software developer specializing in Java backend and modern frontend technologies such as React and Ionic. With hands-on experience deploying cloud-native applications on Microsoft Azure and Google Cloud, I excel in delivering scalable, maintainable, and user-friendly software solutions. I thrive in collaborative environments and continuously sharpen my skills to keep up with the evolving tech landscape. Below you will find
                 my educational background, work experience, achievements, and skills.
               </p>
             </header>

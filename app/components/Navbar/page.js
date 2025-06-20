@@ -11,10 +11,10 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "../../pages/about" },
-    { name: "Projects", href: "../../pages/projects" },
-    { name: "Resume", href: "../../pages/resume" },
-    { name: "Contact", href: "../../pages/contact" },
+    { name: "About", href: "../../about" },
+    { name: "Projects", href: "../../projects" },
+    { name: "Resume", href: "../../resume" },
+    { name: "Contact", href: "../../contact" },
   ];
 
   return (

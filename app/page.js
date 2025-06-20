@@ -6,9 +6,13 @@ import { motion } from "framer-motion";
 
 const skills = [
   { name: "Java & Spring Boot", level: 90 },
-  { name: "React & Ionic", level: 85 },
+  { name: "React & Next.js", level: 85 },
+  { name: "SQL & NoSQL Databases", level: 80 },
   { name: "Azure & Cloud", level: 75 },
   { name: "TypeScript & Node.js", level: 80 },
+  { name: "CI/CD & DevOps Practices", level: 70 },
+  { name: "Agile Methodologies", level: 80 },
+  
 ];
 
 export default function Home() {
@@ -93,10 +97,13 @@ export default function Home() {
             className="space-y-6 max-w-3xl mx-auto text-neutralDark dark:text-neutral-300 text-lg leading-relaxed"
           >
             {[
-              "🚀 Build scalable Java & Spring Boot backend services",
-              "🎨 Develop modern React & Ionic frontend applications",
-              "☁️ Deploy and manage applications on Microsoft Azure",
-              "🤝 Collaborate with cross-functional teams to deliver quality software",
+              "🚀 Build scalable backend services with Java, Spring Boot, and RESTful APIs integrated with SQL, MongoDB, and Firebase.",
+              "🎨 Develop modern, responsive frontends using React and Next.js focused on usability and clean design.",
+              "☁️ Deploy and maintain cloud-native apps on Azure with CI/CD and monitoring for reliability.",
+              "🤝 Collaborate with UX/UI, product, and QA teams to deliver user-focused, high-quality software.",
+              "🔧 Use TypeScript and Node.js to build robust, maintainable, modular codebases.",
+              "🔍 Perform code reviews and testing to ensure quality, performance, and security.",
+              "📚 Stay current with new tech, frameworks, and best practices to drive innovation",
             ].map((text, idx) => (
               <motion.li
                 key={idx}
