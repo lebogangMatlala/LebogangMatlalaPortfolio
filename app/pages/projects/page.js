@@ -78,7 +78,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <main className="max-w-7xl mx-auto px-6 sm:px-10 py-20 font-sans">
+    <main className="max-w-7xl mx-auto px-6 sm:px-10 py-20 font-sans bg-[var(--background)] text-[var(--foreground)]">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+            className="bg-white dark:bg-neutral-900 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-neutral-200 dark:border-neutral-800"
           >
             <div className="h-56 relative">
               <Image
@@ -108,22 +108,24 @@ export default function Projects() {
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-bold text-primary mb-2">{project.title}</h3>
-              <p className="text-neutral-700 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-  {project.tech.map((tech, i) => (
-    <motion.span
-      key={i}
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: i * 0.05 }}
-      className="bg-primary text-accent border border-accent text-xs px-3 py-1 rounded-full font-medium shadow-sm"
-    >
-      {tech}
-    </motion.span>
-  ))}
-</div>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4">
+                {project.description}
+              </p>
 
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((tech, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                    className="bg-primary text-accent border border-accent text-xs px-3 py-1 rounded-full font-medium shadow-sm"
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}

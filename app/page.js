@@ -17,7 +17,7 @@ export default function Home() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="bg-neutralLight text-neutralDark font-sans"
+      className="bg-[var(--background)] text-[var(--foreground)] font-sans transition-colors duration-300"
     >
       <main className="max-w-7xl mx-auto px-6 sm:px-20 py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-16">
         {/* Text Section */}
@@ -30,13 +30,13 @@ export default function Home() {
           <h1 className="text-5xl font-bold text-primary leading-tight">
             Welcome to My Portfolio
           </h1>
-          <p className="text-lg max-w-xl">
-          {"I'm "} <span className="text-secondary font-semibold">Lebogang Matlala</span>, a full stack developer building impactful solutions with <strong>Java, Spring Boot, React</strong> and <strong>Azure</strong>. I’m passionate about clean code and user-first experiences.
+          <p className="text-lg max-w-xl dark:text-neutral-300">
+            {"I'm "}
+            <span className="text-secondary font-semibold">Lebogang Matlala</span>, a full stack
+            developer building impactful solutions with <strong>Java, Spring Boot, React</strong> and{" "}
+            <strong>Azure</strong>. I’m passionate about clean code and user-first experiences.
           </p>
-          <p className="italic text-sm text-neutral-600">
-         
-            
-          </p>
+
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
             <Link
               href="/projects"
@@ -73,7 +73,7 @@ export default function Home() {
       </main>
 
       {/* What I Do Section */}
-      <section className="bg-white py-20">
+      <section className="bg-white dark:bg-[#121212] py-20 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-6 sm:px-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.3 } } }}
-            className="space-y-6 max-w-3xl mx-auto text-neutralDark text-lg leading-relaxed"
+            className="space-y-6 max-w-3xl mx-auto text-neutralDark dark:text-neutral-300 text-lg leading-relaxed"
           >
             {[
               "🚀 Build scalable Java & Spring Boot backend services",
@@ -109,19 +109,25 @@ export default function Home() {
 
           {/* Skills */}
           <motion.div className="mt-16 max-w-3xl mx-auto">
-            <h3 className="text-primary font-bold text-2xl mb-8 text-center">Skill Proficiency</h3>
+            <h3 className="text-primary font-bold text-2xl mb-8 text-center">
+              Skill Proficiency
+            </h3>
             {skills.map(({ name, level }) => (
               <div key={name} className="mb-8">
                 <div className="flex justify-between mb-1">
-                  <span className="font-semibold text-neutralDark">{name}</span>
-                  <span className="font-medium text-sm text-neutralDark">{level}%</span>
+                  <span className="font-semibold text-neutralDark dark:text-neutral-300">
+                    {name}
+                  </span>
+                  <span className="font-medium text-sm text-neutralDark dark:text-neutral-300">
+                    {level}%
+                  </span>
                 </div>
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${level}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.2, ease: "easeOut" }}
-                  className="h-6 bg-primary bg-opacity-10 rounded-full relative overflow-hidden"
+                  className="h-6 bg-primary bg-opacity-10 dark:bg-white/10 rounded-full relative overflow-hidden"
                 >
                   <div
                     className="absolute left-0 top-0 h-6 bg-secondary rounded-full"
