@@ -31,10 +31,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-
-  background-color: var(--neutral-light);
-  color: var(--neutral-dark);
-  font-family: var(--font-sans);
   
   
 }
