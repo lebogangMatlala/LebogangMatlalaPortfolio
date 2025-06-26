@@ -7,57 +7,67 @@ const projects = [
   {
     title: "Ejoobi Platform",
     description:
-      "Backend development, testing, deploying features, and setting up the development environment.",
-    tech: ["Java", "Spring Boot MVC", "MongoDB", "Maven", "SendGrid", "Google Cloud Talent Solution"],
+      "Backend development, testing, deploying features, and setting up the development environment. Enhanced with JWT authentication, role-based access, MongoDB audit logging, real-time dashboards for job tracking and user activity, and integrated communication via WhatsApp, SMS (Twilio), and SendGrid email notifications.",
+    tech: [
+      "Java", "Spring Boot MVC", "MongoDB", "Maven", "SendGrid", "Azure",
+      "Docker", "JWT", "WebSocket", "Chart.js", "WhatsApp API", "RESTful API"
+    ],
     image: "/screening-and-selection.png",
   },
   {
     title: "USSD Upgrade",
     description:
-      "Upgraded the USSD system using ASP.NET and integrated with Google Cloud Talent Solution.",
-    tech: ["ASP.NET", "RESTful API", "MySQL", "Google Cloud Talent Solution"],
+      "Upgraded the USSD system using ASP.NET and integrated with Google Cloud Talent Solution for job matching and external API consumption. Added SMS notification capabilities to enhance user communication and provide real-time alerts.",
+    tech: ["ASP.NET", "RESTful API", "MySQL", "Google Cloud Talent Solution", "Azure Web Apps", "Twilio SMS"],
     image: "/ussd.png",
   },
   {
     title: "Credit Card Fraud Detection",
     description:
-      "Built backend services as part of a qualification project to detect credit card fraud.",
-    tech: ["Java", "Spring Boot MVC", "MongoDB", "Maven", "SendGrid"],
+      "Built backend services as part of a qualification project to detect credit card fraud. Enhanced with validation layers, transaction security, fraud scoring logic, and email alerts on suspicious activity.",
+    tech: ["Java", "Spring Boot MVC", "MongoDB", "Maven", "SendGrid", "Security Patterns", "RESTful API","Heroku"],
     image: "/cred.png",
   },
   {
     title: "Hotel Management Booking System",
     description:
-      "Comprehensive system for managing hotel bookings, room availability, and customer details using Angular and TypeScript with SQL database.",
-    tech: ["Angular", "TypeScript", "SQL"],
+      "Comprehensive system for managing hotel bookings, room availability, and customer details using Angular and TypeScript with SQL database. Integrated email notifications for booking confirmation and cancellation.",
+    tech: ["Angular", "TypeScript", "SQL", "Bootstrap", "RESTful API", "HTML", "CSS", "SendGrid","JWT"],
     image: "/hotel.png",
   },
   {
     title: "Smart Campus",
     description:
-      "Intelligent campus solution built with Next.js, Node.js, and MongoDB to manage campus resources and student services.",
-    tech: ["Next.js", "React", "Node.js", "MongoDB"],
+      "Intelligent campus solution to manage resources, student services, and live activity dashboards. Includes JWT-secured backend, Docker deployment, and role-based access for admins and students. Features email notifications and API integration for student data.",
+    tech: [
+      "Next.js", "React", "Node.js", "MongoDB", "JWT", "Docker", "Chart.js",
+      "SendGrid", "RESTful API","Vercel","Render"
+    ],
     image: "/smart.png",
   },
   {
     title: "Quiz Mobile App",
     description:
-      "Responsive mobile quiz app using Ionic and Angular, integrating Firebase for real-time database, authentication, and cloud storage.",
-    tech: ["TypeScript", "Ionic", "Angular", "Firebase"],
+      "Responsive mobile quiz app using Ionic and Angular, integrating Firebase for real-time database, authentication, and cloud storage. Includes email notifications for quiz results and password reset.",
+    tech: ["TypeScript", "Ionic", "Angular", "Firebase", "RESTful API", "SendGrid"],
     image: "/quiz.png",
   },
   {
     title: "Cloud Talent Search",
     description:
-      "Implemented machine learning job search using Google Cloud Talent solution hosted on Azure.",
-    tech: ["ASP.NET", "Google Cloud Talent Solution", "Azure Web Apps"],
+      "Implemented machine learning job search using Google Cloud Talent solution hosted on Azure with seamless API integration.",
+    tech: ["ASP.NET", "Google Cloud Talent Solution", "RESTful API", "MySQL", "Azure Web Apps"],
     image: "/talent.png",
   },
   {
     title: "Financial Literacy App",
     description:
-      "Multi-platform app educating users on financial concepts using React Native frontend and Java backend.",
-    tech: ["React Native", "Bootstrap", "Spring Boot", "Hibernate", "JavaScript", "HTML", "CSS"],
+      "Multi-platform app educating users on financial concepts using React Native frontend and Java backend. Includes Whatsapp reminders, and secure user login.",
+    tech: [
+      "React Native", "Bootstrap", "Spring Boot", "Hibernate",
+      "JavaScript", "HTML", "CSS", "SendGrid", "Twilio SMS", "JWT",
+
+    ],
     image: "/finn.png",
   },
   {
@@ -70,25 +80,37 @@ const projects = [
   {
     title: "Citizen Reporting App",
     description:
-      "Smart city app for reporting infrastructure issues to local authorities.",
-    tech: ["Next.js", "Spring Boot", "MongoDB"],
+      "Smart city app for reporting infrastructure issues to local authorities. Enhanced with role-based user access, Mongo audit trails, secured REST APIs, and SMS/WhatsApp notifications for case status.",
+    tech: [
+      "Next.js", "Spring Boot", "MongoDB", "JWT", "Audit Logs", "RESTful API","Docker", ,
+      "Twilio SMS", "WhatsApp API"
+    ],
     image: "/citi.png",
   },
   {
     title: "Ticket Tracking System",
     description:
-      "Support system for technicians to manage and resolve issue tickets.",
-    tech: ["Java", "Spring Boot", "React"],
+      "Support system for technicians to manage and resolve issue tickets. Includes real-time status updates, role-based access, Docker deployment, and multi-channel notifications via SMS and Email.",
+    tech: [
+      "Java", "Spring Boot", "React", "Docker", "JWT", "WebSocket","RESTful API",
+      "Twilio SMS", "SendGrid"
+    ],
     image: "/ticket.png",
   },
   {
     title: "Smart Rental Management",
     description:
-      "Mobile app streamlining applications for rental units under government property.",
-    tech: ["React Native", "Node.js", "SQL", "Next.js"],
+      "Mobile app streamlining applications for rental units under government property. Enhanced with secure tenant-agent access control, Docker deployment, application tracking, and integration with SMS and email for lease updates.",
+    tech: [
+      "React Native", "Node.js", "SQL", "Next.js", "Docker", "JWT","Render","RESTful API","Vercel",
+      "SendGrid", "Twilio SMS"
+    ],
     image: "/rental.png",
   },
 ];
+
+
+
 
 
 export default function Projects() {

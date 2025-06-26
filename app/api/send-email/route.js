@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 //const resend = new Resend("re_dkG2TACf_7mSCVVhB2rgHDu7WtR2SsJJU");
 const resend = new Resend(process.env.RESEND_API_KEY);
-console.log("API key:", process.env.RESEND_API_KEY);
+console.log("API key:", process.env);
 export async function POST(req) {
   try {
     const body = await req.json();
