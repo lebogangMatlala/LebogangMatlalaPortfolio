@@ -110,6 +110,9 @@ const projects = [
 ];
 
 
+
+
+
 export default function Projects() {
   return (
     <main className="max-w-7xl mx-auto px-6 sm:px-10 py-20 font-sans bg-[var(--background)] text-[var(--foreground)]">
