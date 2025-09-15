@@ -123,7 +123,7 @@ export default function Contact() {
           </div>
           <div className="flex items-center gap-3">
             <FaMapMarkerAlt className="text-primary" />
-            <span>Krugersdorp, South Africa</span>
+            <span>Kempton Park, South Africa</span>
           </div>
         </div>
 
